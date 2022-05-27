@@ -1,48 +1,24 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
-function Navbar() {
+import { AppBar, IconButton, Toolbar, Typography, Box } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import "./Navbar.css"
+
+
+function NavBar() {
     return (
         <>
-            <AppBar position="static">
-                <Toolbar variant="dense">
-                    <Box style={{ cursor: "pointer" }} >
-                    <Typography variant="h5" color="initial">
-                            BlogPessoal
-                        </Typography>
-                    </Box>
-
-                    <Box display="flex" justifyContent="start">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                home
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                postagens
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                temas
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                cadastrar tema
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                logout
-                            </Typography>
-                        </Box>
-                    </Box>
-
+            <AppBar position="static" className='back'>
+                <Toolbar className='bar'>
+                <IconButton edge="start" color="inherit" aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography className='title' variant="h6">
+                        Menu Gelato Blog
+                    </Typography>
                 </Toolbar>
             </AppBar>
         </>
     )
 }
 
-export default Navbar;
+export default NavBar
