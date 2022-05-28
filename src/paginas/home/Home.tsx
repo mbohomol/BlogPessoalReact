@@ -18,7 +18,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                <img src={require('../../assets/images/sorvetes1.jpg')}  alt="" width="700px" height="500px" />
+                <img src={require('../../assets/images/sorvetes1.jpg')}  alt="" width="700px" height="500px"/>
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>
