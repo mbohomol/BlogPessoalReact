@@ -1,51 +1,71 @@
 import React from 'react';
-import { AppBar, IconButton, Toolbar, Typography, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import MenuIcon from '@material-ui/icons/Menu';
-import "./Navbar.css"
+import {useNavigate } from 'react-router-dom'
+import useLocalStorage from 'react-use-localstorage';
 
-
+import './Navbar.css'
 function Navbar() {
+    const [token, setToken] = useLocalStorage('token');
+    let navigate = useNavigate();
+    
+    function goLogout(){
+        setToken('')
+        alert("Usuário deslogado")
+       navigate('/login')
+    }
     return (
         <>
-        <AppBar position="static" className='back'>
-            <Toolbar variant="dense">
+            <AppBar position="static">
+                <Toolbar variant="dense">
+                    <Box className='cursor'>
+                        <Typography variant="h5" color="inherit">
+                            GelatoBlog
+                        </Typography>
+                    </Box>
 
-                <Box display="flex" justifyContent="start">
-                    <Box mx={1} className='cursor'>
-                        <Typography variant="h6" color="inherit">
-                            Home
-                        </Typography>
-                    </Box>
-                    <Box mx={1} className='cursor'>
-                        <Typography variant="h6" color="inherit">
-                            Postagens
-                        </Typography>
-                    </Box>
-                    <Box mx={1} className='cursor'>
-                        <Typography variant="h6" color="inherit">
-                            Criar Nova Postagem
-                        </Typography>
-                    </Box>
-                    <Box mx={1} className='cursor'>
-                        <Typography variant="h6" color="inherit">
-                            Perfil
-                        </Typography>
-                    </Box>
-                    <Link to='/login' className='text-decorator-none'>
+                    <Box display="flex" justifyContent="start">
+                        <Link to="/home" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit">
+                                    Home
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link to="/posts" className="text-decorator-none">
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit">
+                                    Postagens
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link to="/temas" className="text-decorator-none">
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                Entrar
+                                Temas
                             </Typography>
                         </Box>
-                    </Link>
-                    
-                </Box>
+                        </Link>
+                        <Link to="/formularioTema" className="text-decorator-none">
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit">
+                                Cadastrar Tema
+                            </Typography>
+                        </Box>
+                        </Link>
+                      
+                            <Box mx={1} className='cursor' onClick={goLogout}>
+                                <Typography variant="h6" color="inherit">
+                                    Logout
+                                </Typography>
+                            </Box>
+                        
+                    </Box>
 
-            </Toolbar>
-        </AppBar>
-    </>
-)
+                </Toolbar>
+            </AppBar>
+        </>
+    )
 }
 
 export default Navbar;
