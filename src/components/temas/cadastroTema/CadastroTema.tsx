@@ -8,7 +8,7 @@ import { buscaId, post, put } from '../../../services/Service';
 
 
 function CadastroTema() {
-    let history = useNavigate();
+    let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
     const [token, setToken] = useLocalStorage('token');
     const [tema, setTema] = useState<Tema>({

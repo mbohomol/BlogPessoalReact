@@ -7,7 +7,7 @@ import Postagem from '../../../models/Postagem';
 import { buscaId, deleteId } from '../../../services/Service';
 
 function DeletarPostagem() {
-    let history = useNavigate();
+    let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
     const [token, setToken] = useLocalStorage('token');
     const [post, setPosts] = useState<Postagem>()

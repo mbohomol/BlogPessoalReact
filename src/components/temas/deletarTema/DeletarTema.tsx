@@ -8,7 +8,7 @@ import Tema from '../../../models/Tema';
 
 
 function DeletarTema() {
-    let history = useNavigate();
+    let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
     const [token, setToken] = useLocalStorage('token');
     const [tema, setTema] = useState<Tema>()

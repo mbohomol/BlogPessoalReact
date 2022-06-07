@@ -27,7 +27,7 @@ function Login() {
         }
 
             useEffect(()=>{
-                if(token != ''){
+                if(token !== ''){
                     navigate('/home')
                 }
             }, [token])
@@ -36,7 +36,7 @@ function Login() {
             e.preventDefault();
             try{
                 await login(`/usuarios/logar`, userLogin, setToken)
-            
+            console.log(token)
 
                 alert('Usuário logado com sucesso!');
             }catch(error){
@@ -48,16 +48,15 @@ function Login() {
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
-                    <form>
+                    <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{fontWeight: 'bold'}}>Entrar</Typography>
-                        <TextField id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField id='senha' label='senha' variant='outlined' name='senha' margin='normal' style={{borderColor: "#e9967a"}}   type='password'fullWidth />
+                        <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
+                        <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' style={{borderColor: "#e9967a"}} type='password'fullWidth />
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/home' className='text-decorator-none'>
                                 <Button style={{ borderColor: "#e9967a", backgroundColor: "#fa8072", color: "white" }}type='submit' variant='contained' >
                                     Entrar
                                 </Button>
-                            </Link>
+                            
                         </Box>
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
