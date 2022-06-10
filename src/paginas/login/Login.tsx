@@ -70,7 +70,7 @@ function Login() {
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{fontWeight: 'bold'}}>Entrar</Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' style={{ color: "#f0447d", fontWeight: "bold" }}>Entrar</Typography>
                         <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' style={{borderColor: "#e9967a"}} type='password'fullWidth />
                         <Box marginTop={2} textAlign='center'>
@@ -90,10 +90,7 @@ function Login() {
                     </Box>
                 </Box>
             </Grid>
-            <Grid xs={6} style={{
-                backgroundImage: `url(https://images.unsplash.com/photo-1572837663132-76c0ccd9cb6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)`,
-                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
-            }}>
+            <Grid xs={6} className="imagem">
 
             </Grid>
         </Grid>
