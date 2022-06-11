@@ -5,7 +5,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Box } from '@material-ui/core';
 import {Typography, Grid } from '@material-ui/core'
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/tokensReducer';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+
 
 function Footer() {
     const token = useSelector<TokenState, TokenState["tokens"]>(

@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import {useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/tokensReducer';
-import { addToken } from '../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { addToken } from '../../../store/tokens/actions';
 
 
 function Navbar() {

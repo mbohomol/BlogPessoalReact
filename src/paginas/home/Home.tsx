@@ -5,9 +5,9 @@ import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostage
 import './Home.css';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../components/store/tokens/tokensReducer';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { TokenState } from '../../store/tokens/tokensReducer';
 
 
 function Home() {
