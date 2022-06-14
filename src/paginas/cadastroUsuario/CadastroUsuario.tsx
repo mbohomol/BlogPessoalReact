@@ -89,11 +89,11 @@ function CadastroUsuario() {
 
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
-                                <Button variant='contained' className='corCancelar4'>
+                                <Button variant='contained' className='corCancelar'>
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' className='corCadastrar4'>
+                            <Button type='submit' variant='contained' className='corCadastrar'>
                                     Cadastrar
                             </Button>
                         </Box>

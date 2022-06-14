@@ -26,7 +26,7 @@ function TabPostagem() {
         </TabPanel>
         <TabPanel value="2">
           <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#db7093", fontWeight: "bold" }}>Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify"> O GelatoBlog foi pensado em todos os amantes de sorvete!</Typography>
+          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">O Gelato Blog foi pensando em quem ama sorvete e em quem ama compartilhar experiências e dicas de lugares que oferecem os melhores gelatos!</Typography>
         </TabPanel>
       </TabContext>
     </>

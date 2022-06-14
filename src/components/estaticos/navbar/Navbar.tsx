@@ -34,7 +34,7 @@ function Navbar() {
     var navbarComponent;
 
     if(token != ""){
-        navbarComponent = <AppBar position="static" className="back">
+        navbarComponent = <AppBar position="static" className="navbar">
         <Toolbar variant="dense">
             <Box className='cursor'>
                 <Typography variant="h5" color="inherit">

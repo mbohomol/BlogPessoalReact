@@ -7,13 +7,9 @@
     text-decoration: none;
 }
 
-.back{
+.navbar{
     background: linear-gradient(36deg, #db7093 8%, #ffe4e1 80%)!important;
 
 }
 
-.bar{
-    display: flex;
-    /* justify-content: center;  */
-}
 

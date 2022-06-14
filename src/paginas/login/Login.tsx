@@ -91,8 +91,8 @@ function Login() {
                     </Box>
                 </Box>
             </Grid>
-            <Grid xs={6} className="imagem">
-
+            <Grid xs={6}>
+            <img src={require('../../assets/images/sorvetelogin.jpg')}  alt="" width="850" height="700px"/>
             </Grid>
         </Grid>
     );
