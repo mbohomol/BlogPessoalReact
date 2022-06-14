@@ -52,7 +52,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                <img src={require('../../assets/images/sorvete..jpg')}  alt="" width="750px" height="550px"/>
+                <img src={require('../../assets/images/sorvete.jpg')}  alt="" width="750px" height="550px"/>
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 <TabPostagem />

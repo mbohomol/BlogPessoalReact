@@ -92,7 +92,7 @@ function Login() {
                 </Box>
             </Grid>
             <Grid xs={6}>
-            <img src={require('../../assets/images/sorvetelogin.jpg')}  alt="" width="850" height="700px"/>
+            <img src={require('../../assets/images/sorvetelogin1.JPG')}  alt="" width="850" height="700px"/>
             </Grid>
         </Grid>
     );
